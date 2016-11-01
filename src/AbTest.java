@@ -3,7 +3,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
 
 public class AbTest {
 
@@ -11,7 +10,6 @@ public class AbTest {
 
 		// say hello
 
-		
 		getNetData("http://www.baidu.com");
 	}
 
@@ -22,19 +20,16 @@ public class AbTest {
 			con.setReadTimeout(6000);
 			con.setRequestMethod("GET");
 			InputStream in = con.getInputStream();
-			BufferedReader  bufferedReader=new BufferedReader(new InputStreamReader(in));
-			String line="";
-			StringBuffer buffer=new StringBuffer();
-			while ((line=bufferedReader.readLine())!=null) {
+			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(in));
+			String line = "";
+			StringBuffer buffer = new StringBuffer();
+			while ((line = bufferedReader.readLine()) != null) {
 
 				buffer.append(line);
 			}
-			
-  System.out.println(buffer.toString());
+			System.out.println(buffer.toString());
 		} catch (Exception e) {
-			// TODO: handle exception
 		}
-
 	}
 
 }
