@@ -24,7 +24,6 @@ public class AbTest {
 			String line = "";
 			StringBuffer buffer = new StringBuffer();
 			while ((line = bufferedReader.readLine()) != null) {
-
 				buffer.append(line);
 			}
 			System.out.println(buffer.toString());
